@@ -2,7 +2,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:hello/loginscreen.dart';
 
-// mwerhababababa
 void main() {
   runApp(MyApp());
 }

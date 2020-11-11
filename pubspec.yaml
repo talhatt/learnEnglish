@@ -53,6 +53,9 @@ flutter:
     - images/vegetable.png
     - images/wheel.png
     - images/animal.png
+    - images/gradient.png
+    - images/paper.png
+    - images/profile.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

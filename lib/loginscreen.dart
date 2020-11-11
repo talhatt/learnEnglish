@@ -95,7 +95,7 @@ class Loginscreen extends StatelessWidget {
                     child: RaisedButton(
                       onPressed: () {
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (ctx) => Homepage()));
+                            MaterialPageRoute(builder: (ctx) => Stateee()));
                       },
                       child: Text(
                         'Giriş Yap',
