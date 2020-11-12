@@ -1,6 +1,6 @@
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
-import 'package:hello/buypage.dart';
+import 'package:hello/workingpage.dart';
 
 class Stateee extends StatefulWidget {
   @override
@@ -180,7 +180,7 @@ class Homepage extends State<Stateee> {
           child: Icon(Icons.add),
           onPressed: () {
             Navigator.push(
-                context, MaterialPageRoute(builder: (ctx) => Buypage()));
+                context, MaterialPageRoute(builder: (ctx) => Workingpage()));
           }),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
