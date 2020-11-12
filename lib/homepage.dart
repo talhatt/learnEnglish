@@ -1,7 +1,10 @@
-import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:hello/drawer.dart';
+import 'package:hello/subjects.dart';
 import 'package:hello/workingpage.dart';
+
+import 'customwidget/custom_card_shape_painter.dart';
+import 'models/subjects.dart';
 
 class Stateee extends StatefulWidget {
   @override
@@ -181,6 +184,7 @@ class Homepage extends State<Stateee> {
         child: DrawerBuilder(),
       ),
       appBar: AppBar(
+        title: Text("Konularım"),
         leading: IconButton(
             icon: Icon(Icons.menu),
             onPressed: () {
@@ -193,7 +197,7 @@ class Homepage extends State<Stateee> {
           child: Icon(Icons.add),
           onPressed: () {
             Navigator.push(
-                context, MaterialPageRoute(builder: (ctx) => Workingpage()));
+                context, MaterialPageRoute(builder: (ctx) => Subjects()));
           }),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
@@ -224,52 +228,5 @@ class Homepage extends State<Stateee> {
         onTap: _onItemTapped,
       ),
     );
-  }
-}
-
-class PlaceInfo {
-  final String name;
-  final String des;
-  final String image;
-  PlaceInfo(this.name, this.des, this.image);
-}
-
-class CustomCardShapePainter extends CustomPainter {
-  final double radius;
-  final Color startColor;
-  final Color endColor;
-
-  CustomCardShapePainter(this.radius, this.startColor, this.endColor);
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    var radius = 24.0;
-
-    var paint = Paint();
-    paint.shader =
-        ui.Gradient.linear(Offset(0, 0), Offset(size.width, size.height), [
-      HSLColor.fromColor(
-        startColor,
-      ).withLightness(0.8).toColor(),
-      endColor
-    ]);
-
-    var path = Path()
-      ..moveTo(0, size.height)
-      ..lineTo(size.width - radius, size.height)
-      ..quadraticBezierTo(
-          size.width, size.height, size.width, size.height - radius)
-      ..lineTo(size.width, radius)
-      ..quadraticBezierTo(size.width, 0, size.width - radius, 0)
-      ..lineTo(size.width - 1.5 * radius, 0)
-      ..quadraticBezierTo(-radius, 2 * radius, 0, size.height)
-      ..close();
-
-    canvas.drawPath(path, paint);
-  }
-
-  @override
-  bool shouldRepaint(CustomPainter oldDelegate) {
-    return true;
   }
 }

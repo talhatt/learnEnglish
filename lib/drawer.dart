@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hello/add_to_drawer_menu.dart';
+import 'package:hello/loginscreen.dart';
 
 class DrawerBuilder extends StatelessWidget {
   const DrawerBuilder({Key key}) : super(key: key);
@@ -14,14 +15,15 @@ class DrawerBuilder extends StatelessWidget {
               icon: Icon(Icons.account_circle),
               label: Text("Giriş Yap"),
               onPressed: () {
-                Navigator.pushNamed(context, "/signIn");
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (ctx) => Loginscreen()));
               },
             ),
           ),
         ),
         AddToDrawerMenu(
-          text: "Ana Sayfa",
-          routeName: "/home",
+          text: "Konularım",
+          routeName: "/subjects",
           iconName: Icons.home,
         ),
         AddToDrawerMenu(
