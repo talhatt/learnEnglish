@@ -12,7 +12,7 @@ class Loginscreen extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('images/1.png'), fit: BoxFit.cover),
+              image: AssetImage('images/1.png'), fit: BoxFit.fill),
           gradient: LinearGradient(
               colors: [Colors.blue[400], Colors.blue],
               begin: Alignment.bottomCenter,
@@ -53,13 +53,13 @@ class Loginscreen extends StatelessWidget {
               ),
               CustomTextField(
                 issecured: false,
-                hint: '    Email/Telefon',
+                hint: '  Email/Telefon',
               ),
               SizedBox(
                 height: 20,
               ),
               CustomTextField(
-                hint: '   Parola',
+                hint: '  Parola',
                 issecured: true,
               ),
               SizedBox(
@@ -95,7 +95,7 @@ class Loginscreen extends StatelessWidget {
                     child: RaisedButton(
                       onPressed: () {
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (ctx) => Homepage()));
+                            MaterialPageRoute(builder: (ctx) => Stateee()));
                       },
                       child: Text(
                         'Giriş Yap',
