@@ -24,6 +24,7 @@ class Homepage extends State<Stateee> {
     });
   }
 
+//merhaba
   Widget showPage(int _selectedIndex) {
     if (_selectedIndex == 0) {
       return page1();
