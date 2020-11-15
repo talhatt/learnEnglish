@@ -57,6 +57,11 @@ flutter:
     - images/paper.png
     - images/profile.png
     - images/wordicon.png
+    - images/profile2.png
+    - images/flag.png
+    - images/cup.png
+    - images/tick.png
+    - images/x.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
