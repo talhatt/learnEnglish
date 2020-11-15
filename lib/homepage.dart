@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hello/drawer.dart';
+import 'package:hello/myprofile_offline.dart';
 import 'package:hello/subjects.dart';
 import 'package:hello/workingpage.dart';
 
@@ -29,6 +30,7 @@ class Homepage extends State<Stateee> {
     });
   }
 
+//merhaba
   Widget showPage(int _selectedIndex) {
     if (_selectedIndex == 0) {
       return page1();
@@ -196,8 +198,8 @@ class Homepage extends State<Stateee> {
       floatingActionButton: FloatingActionButton(
           child: Icon(Icons.add),
           onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (ctx) => Subjects()));
+            Navigator.push(context,
+                MaterialPageRoute(builder: (ctx) => MyprofileOffline()));
           }),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
