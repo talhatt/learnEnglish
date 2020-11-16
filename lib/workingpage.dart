@@ -95,24 +95,18 @@ class Page extends State<Workingpage> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.attachment),
-            title: Text(
-              'Çalışma',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-            ),
+            title: Text('Çalışma',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.warning),
-            title: Text(
-              'Quiz',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-            ),
+            title: Text('Quiz',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.warning),
-            title: Text(
-              'Test',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-            ),
+            title: Text('Test',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
           ),
         ],
         currentIndex: _selectedIndex,

@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hello/best_offline.dart';
 import 'package:hello/drawer.dart';
-import 'package:hello/myprofile_offline.dart';
-import 'package:hello/subjects.dart';
-import 'package:hello/workingpage.dart';
-
+import 'package:hello/quiz.dart';
 import 'customwidget/custom_card_shape_painter.dart';
 import 'models/subjects.dart';
 
@@ -198,8 +196,8 @@ class Homepage extends State<Stateee> {
       floatingActionButton: FloatingActionButton(
           child: Icon(Icons.add),
           onPressed: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (ctx) => MyprofileOffline()));
+            Navigator.push(
+                context, MaterialPageRoute(builder: (ctx) => Quiz()));
           }),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
